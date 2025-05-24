@@ -5,132 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zikra Haroon Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
     :root {
-      --primary: #00bcd4;
-      --dark: #0e1a2b;
-      --light: #f9f9f9;
+      --background: #000000;
+      --text: #e6e6e6;
+      --primary: #1f1f1f;
+      --highlight: #2a2a2a;
       --accent: #4caf50;
-      --text-light: #e0e0e0;
+      --link-hover: #5f5f5f;
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--dark);
-      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     nav {
-      background-color: var(--dark);
-      padding: 15px;
+      background-color: var(--primary);
+      padding: 20px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 25px;
+      border-bottom: 1px solid #333;
     }
 
     nav a {
-      color: white;
+      color: var(--text);
       text-decoration: none;
       font-weight: 600;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 10px 18px;
+      border-radius: 4px;
       transition: background 0.3s;
     }
 
     nav a:hover {
-      background-color: var(--primary);
+      background-color: var(--highlight);
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
-      background-color: var(--dark);
+      padding: 70px 20px 40px;
     }
 
     header h1 {
       font-size: 3em;
-      color: var(--primary);
-      margin: 0;
+      color: white;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2em;
-      margin: 10px 0;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 10px auto;
+      color: #ccc;
     }
 
     .buttons {
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 12px 25px;
-      background-color: var(--accent);
-      color: white;
-      font-size: 1em;
-      border: none;
-      border-radius: 8px;
+      padding: 12px 28px;
+      background-color: transparent;
+      color: var(--text);
+      border: 2px solid var(--accent);
+      border-radius: 6px;
       text-decoration: none;
-      transition: background 0.3s;
+      font-size: 1em;
+      font-weight: 600;
+      transition: all 0.3s;
     }
 
     .btn:hover {
-      background-color: #388e3c;
-    }
-
-    .intro-section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      gap: 40px;
-    }
-
-    .intro-text {
-      max-width: 500px;
-    }
-
-    .intro-text h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    .intro-text ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .intro-text li {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    .intro-image img {
-      width: 300px;
-      border-radius: 20px;
-      border: 4px solid var(--primary);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      background-color: var(--accent);
+      color: #000;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      color: #aaa;
+      color: #666;
       background-color: #111;
+      border-top: 1px solid #333;
     }
 
     @media (max-width: 700px) {
-      .intro-section {
+      nav {
         flex-direction: column;
-        text-align: center;
+        gap: 10px;
       }
 
-      .intro-image img {
-        width: 90%;
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .btn {
+        width: 80%;
       }
     }
   </style>
@@ -148,25 +124,12 @@
   <header>
     <h1>Hi, I'm Zikra Haroon</h1>
     <p>Aspiring Developer | Problem Solver | Tech Enthusiast</p>
+    <p>A Mathematics student with a passion for programming and data-driven problem solving. I love combining logic and creativity to build useful tools, visualize complex concepts, and bring ideas to life through code. This portfolio showcases some of my projects where math meets tech—explore and connect!</p>
     <div class="buttons">
       <a class="btn" href="contact.html">Contact me!</a>
       <a class="btn" href="projects.html">My Projects</a>
     </div>
   </header>
-
-  <section class="intro-section">
-    <div class="intro-image">
-      <img src="https://via.placeholder.com/400x400.png?text=Zikra+Haroon" alt="Profile Image">
-    </div>
-    <div class="intro-text">
-      <h2>Why Work With Me?</h2>
-      <ul>
-        <li>➕ Detail-Oriented and Focused</li>
-        <li>✔ Prioritizes Quality Over Quantity</li>
-        <li>💼 Strong Work Ethic and Dedication</li>
-      </ul>
-    </div>
-  </section>
 
   <footer>
     &copy; 2025 Zikra Haroon. All rights reserved.
