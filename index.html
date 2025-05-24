@@ -41,18 +41,20 @@
       background-color: var(--dark);
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       padding: 10px 0;
     }
 
-    nav div {
+    nav a {
       color: white;
       margin: 0 15px;
       padding: 10px 15px;
       border-radius: 5px;
-      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
     }
 
-    nav div:hover {
+    nav a:hover {
       background-color: var(--primary);
     }
 
@@ -74,6 +76,34 @@
       line-height: 1.6;
     }
 
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: var(--accent);
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #009e85;
+    }
+
+    .image-box {
+      margin-top: 30px;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     footer {
       background-color: #eee;
       color: #555;
@@ -92,7 +122,7 @@
         flex-direction: column;
       }
 
-      nav div {
+      nav a {
         margin: 5px 0;
       }
     }
@@ -101,27 +131,33 @@
 <body>
 
   <header>
-    <h1>Hi, I'm [Your Name]</h1>
+    <h1>Hi, I'm Zikra Haroon</h1>
     <p>Aspiring Developer | Problem Solver | Tech Enthusiast</p>
   </header>
 
   <nav>
-    <div>Home</div>
-    <div>About</div>
-    <div>Skills</div>
-    <div>Projects</div>
-    <div>Contact</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
     <h2>Welcome to My Portfolio</h2>
     <p>
-      This is my personal space to share my journey, showcase the projects I've built, and demonstrate the skills I've learned along the way. Whether it's programming, problem-solving, or learning new tools, I'm always eager to grow and create.
+      This is my personal space to share my journey, showcase the projects I've built, and demonstrate the skills I've learned along the way.
     </p>
+
+    <a class="btn" href="projects.html">View My Work</a>
+
+    <div class="image-box">
+      <img src="https://via.placeholder.com/800x400.png?text=Welcome+to+My+Portfolio" alt="Portfolio Intro Image">
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 [Your Name]. Built with pure HTML + CSS. No frameworks, no fluff.
+    &copy; 2025 Zikra Haroon. 
   </footer>
 
 </body>
