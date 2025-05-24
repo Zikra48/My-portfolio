@@ -2,70 +2,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #333;
+    :root {
+      --primary: #0077cc;
+      --dark: #1a1a1a;
+      --light: #f9f9f9;
+      --accent: #00bfa5;
     }
 
-    header, nav, main, footer {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #e0e0e0;
     }
 
     nav {
-      background: #333;
-      color: white;
+      background-color: var(--dark);
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      padding: 10px 0;
     }
 
-    nav a {
+    nav div {
       color: white;
-      text-decoration: none;
-      padding: 14px;
-    }
-
-    nav a:hover {
-      background-color: #575757;
+      margin: 0 15px;
+      padding: 10px 15px;
       border-radius: 5px;
+      cursor: pointer;
     }
 
-    h1 {
-      color: #0077cc;
+    nav div:hover {
+      background-color: var(--primary);
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    main h2 {
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     footer {
+      background-color: #eee;
+      color: #555;
       text-align: center;
-      font-size: 0.9em;
-      color: #666;
+      padding: 20px;
       margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav div {
+        margin: 5px 0;
+      }
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Hi, I'm [Your Name]</h1>
+    <p>Aspiring Developer | Problem Solver | Tech Enthusiast</p>
+  </header>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <div>Home</div>
+    <div>About</div>
+    <div>Skills</div>
+    <div>Projects</div>
+    <div>Contact</div>
   </nav>
 
   <main>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello! I'm Zikra Haroon, a Mathematics Student. Explore my skills, projects, and more.</p>
-    <img src="images/profile.jpg" alt="Profile Photo" width="200" />
+    <h2>Welcome to My Portfolio</h2>
+    <p>
+      This is my personal space to share my journey, showcase the projects I've built, and demonstrate the skills I've learned along the way. Whether it's programming, problem-solving, or learning new tools, I'm always eager to grow and create.
+    </p>
   </main>
 
   <footer>
-    &copy; 2025 Zikra Haroon — All rights reserved.
+    &copy; 2025 [Your Name]. Built with pure HTML + CSS. No frameworks, no fluff.
   </footer>
 
 </body>
