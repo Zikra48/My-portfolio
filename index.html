@@ -52,6 +52,10 @@
     .form-check-input:checked {
       background-color: #0d6efd;
     }
+    .skill-description {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
   </style>
 </head>
 <body>
@@ -59,8 +63,21 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Zikra Haroon</a>
-      <div class="form-check form-switch ms-auto">
-        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item d-flex align-items-center ps-3">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="darkModeToggle">
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -91,13 +108,31 @@
   <section id="skills" class="bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="mb-4">Skills</h2>
-      <div class="row g-3">
-        <div class="col"><span class="badge bg-primary">Python</span></div>
-        <div class="col"><span class="badge bg-secondary">HTML</span></div>
-        <div class="col"><span class="badge bg-success">CSS</span></div>
-        <div class="col"><span class="badge bg-info text-dark">Excel</span></div>
-        <div class="col"><span class="badge bg-dark">OOPs</span></div>
-        <div class="col"><span class="badge bg-warning text-dark">Data Analysis</span></div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <span class="badge bg-primary">Python</span>
+          <p class="skill-description">Efficient scripting, OOPs, and automation tools.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="badge bg-secondary">HTML</span>
+          <p class="skill-description">Clean, semantic structure for modern web pages.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="badge bg-success">CSS</span>
+          <p class="skill-description">Responsive layouts and elegant visual styling.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="badge bg-info text-dark">Excel</span>
+          <p class="skill-description">Advanced analysis with dashboards, macros, and pivot tables.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="badge bg-dark">OOPs</span>
+          <p class="skill-description">Structured programming using classes and objects in Python.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="badge bg-warning text-dark">Data Analysis</span>
+          <p class="skill-description">Extracting insights from structured data using code and tools.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -116,21 +151,21 @@
         </div>
         <div class="col-md-6">
           <div class="card project-card p-3">
-            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_tijmpv.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
+            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ze6ixqtx.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
             <h5 class="card-title">Daily Brew Website</h5>
             <p class="card-text">A responsive website for a fictional coffee shop built using HTML & CSS.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card project-card p-3">
-            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_uwRzmh.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
+            <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_s6y3jk7w.json" background="transparent" speed="1" style="height: 200px" loop autoplay></lottie-player>
             <h5 class="card-title">Recipe Recommender</h5>
             <p class="card-text">Suggests recipes based on available ingredients using Python logic.</p>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card project-card p-3">
-            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_yd9yfc.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
             <h5 class="card-title">Math Quiz Game App</h5>
             <p class="card-text">Interactive quiz game that tests arithmetic skills with timer-based challenges.</p>
           </div>
