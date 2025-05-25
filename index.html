@@ -9,6 +9,21 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
+    section {
+  padding: 100px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hover-btn {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hover-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
     html {
       scroll-behavior: smooth;
     }
@@ -139,13 +154,13 @@
   </nav>
 
   <!-- Home / Hero Section -->
-  <section id="home" class="hero" data-aos="fade-up">
-    <div class="container hero-content fade-in">
+  <section class="hero d-flex align-items-center justify-content-center text-center" id="home" style="min-height: 100vh;">
+    <div class="container" data-aos="fade-up">
       <h1 class="display-4 fw-bold">Hi, I'm Zikra Haroon</h1>
-      <p class="lead">Mathematics Graduate | Python &amp; Excel Specialist | Data Enthusiast</p>
-      <div>
-        <a href="#projects" class="btn btn-outline-primary">My Projects</a>
-        <a href="#contact" class="btn btn-outline-secondary">Contact Me</a>
+      <p class="lead">Mathematics Graduate | Python & Excel Specialist | Data Enthusiast</p>
+      <div class="mt-4">
+        <a href="#projects" class="btn btn-primary me-3 btn-lg hover-btn">My Projects</a>
+        <a href="#contact" class="btn btn-outline-secondary btn-lg hover-btn">Contact Me</a>
       </div>
     </div>
   </section>
@@ -213,12 +228,13 @@
         </div>
         <div class="col-md-6">
           <div class="card project-card p-3">
-            <img src="/mnt/data/cozy-coffee-shop-interior-with-espresso-machines-fresh-pastries-on-display-and-some-green-plants-small-local-business-concept-banner-photo.jpeg" 
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
                  alt="Daily Brew Coffee Shop" class="img-fluid rounded mb-3" />
             <h5 class="card-title">Daily Brew Website</h5>
             <p class="card-text">A responsive website for a fictional coffee shop built using HTML &amp; CSS.</p>
           </div>
         </div>
+        
         
         <div class="col-md-6">
           <div class="card project-card p-3">
