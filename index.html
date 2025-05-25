@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Zikra Haroon | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -11,50 +11,93 @@
     html {
       scroll-behavior: smooth;
     }
-    body {
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: white;
+      transition: background 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .hero {
+      height: 100vh;
+      background: #000;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       position: relative;
     }
     canvas#starCanvas {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       z-index: -1;
     }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
     section {
       padding: 100px 0;
     }
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: white;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .nav-link {
-      cursor: pointer;
+    .progress {
+      height: 20px;
     }
     footer a {
       margin: 0 10px;
       font-size: 1.5rem;
     }
+    .card {
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
   </style>
 </head>
 <body>
-  <!-- Star Background -->
+  <!-- Star Canvas -->
   <canvas id="starCanvas"></canvas>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">MyPortfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="#">Zikra Haroon</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -65,42 +108,84 @@
     </div>
   </nav>
 
-  <!-- About Section -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hi, I'm Zikra</h1>
+    <p>Math student | Data Enthusiast | Creative Coder</p>
+    <a href="#about" class="btn btn-outline-light mt-4">Explore My Work</a>
+  </section>
+
+  <!-- About -->
   <section id="about" class="container text-center" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I'm a Mathematics student with a passion for programming and data-driven problem solving. I love combining logic and creativity to build useful tools, visualize complex concepts, and bring ideas to life through code. This portfolio showcases some of my projects where math meets tech—explore and connect!</p>
+    <p>
+      I'm a Mathematics student with a passion for programming and data-driven problem solving. I love combining logic and creativity to build useful tools, visualize complex concepts, and bring ideas to life through code.
+    </p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="bg-light" data-aos="fade-up">
-    <div class="container text-center">
-      <h2>Skills</h2>
-      <ul class="list-unstyled">
-        <li>Python</li>
-        <li>HTML / CSS</li>
-        <li>OOPs (Object-Oriented Programming)</li>
-        <li>Data Analysis Tools</li>
-        <li>Excel Expert</li>
-      </ul>
+    <div class="container">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="mb-3">
+        <label>Python</label>
+        <div class="progress"><div class="progress-bar bg-success" style="width: 90%">90%</div></div>
+      </div>
+      <div class="mb-3">
+        <label>HTML/CSS</label>
+        <div class="progress"><div class="progress-bar bg-info" style="width: 85%">85%</div></div>
+      </div>
+      <div class="mb-3">
+        <label>OOPs Concepts</label>
+        <div class="progress"><div class="progress-bar bg-warning" style="width: 80%">80%</div></div>
+      </div>
+      <div class="mb-3">
+        <label>Data Analysis Tools</label>
+        <div class="progress"><div class="progress-bar bg-danger" style="width: 75%">75%</div></div>
+      </div>
+      <div class="mb-3">
+        <label>Excel</label>
+        <div class="progress"><div class="progress-bar bg-primary" style="width: 95%">95%</div></div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" data-aos="fade-up">
-    <div class="container text-center">
-      <h2>Projects</h2>
-      <ul class="list-unstyled">
-        <li><strong>Expense Tracker:</strong> A budget management tool with categorized expenses.</li>
-        <li><strong>Daily Brew Website:</strong> A coffee shop landing page with menus and orders.</li>
-        <li><strong>Recipe Recommender:</strong> Suggests meals based on user preferences and ingredients.</li>
-        <li><strong>Math Quiz Game App:</strong> Interactive quiz app to sharpen arithmetic skills.</li>
-      </ul>
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <h5>Expense Tracker</h5>
+            <p>A budget management tool with categorized expenses and summary charts.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <h5>Daily Brew Website</h5>
+            <p>A stylish landing page for a coffee shop featuring menu, gallery, and contact forms.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <h5>Recipe Recommender</h5>
+            <p>Suggests personalized recipes based on user preferences and ingredients.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card p-3">
+            <h5>Math Quiz Game</h5>
+            <p>An educational quiz game app to test and improve mental math skills.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-light" data-aos="fade-up">
-    <div class="container text-center">
+  <!-- Contact -->
+  <section id="contact" class="bg-light text-center" data-aos="fade-up">
+    <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:zikraharoon248@gmail.com">zikraharoon248@gmail.com</a></p>
       <footer>
@@ -111,14 +196,18 @@
     </div>
   </section>
 
+  <!-- Back to Top -->
+  <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+    ↑
+  </button>
+
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
-  <script>
-    // Starry background animation
+
+    // Starry background
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
     let stars = [];
@@ -131,26 +220,26 @@
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    function initStars(count = 100) {
+    function initStars(count = 120) {
       stars = [];
       for (let i = 0; i < count; i++) {
         stars.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          radius: Math.random() * 1.5 + 0.5,
+          r: Math.random() * 1.5 + 0.5,
           alpha: Math.random(),
-          speed: Math.random() * 0.001 + 0.001
+          speed: Math.random() * 0.002 + 0.001
         });
       }
     }
 
     function drawStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'white';
       stars.forEach(star => {
         ctx.globalAlpha = star.alpha;
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
         ctx.fill();
         star.alpha += star.speed;
         if (star.alpha <= 0 || star.alpha >= 1) {
@@ -163,6 +252,11 @@
 
     initStars();
     drawStars();
+
+    // Show back to top button
+    window.onscroll = () => {
+      document.getElementById('backToTop').style.display = window.scrollY > 200 ? 'flex' : 'none';
+    };
   </script>
 </body>
 </html>
