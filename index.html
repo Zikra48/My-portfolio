@@ -9,6 +9,45 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
 
+/* Keep your existing styles here — then add/replace these at the bottom of your style block: */
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+body {
+  scroll-padding-top: 0px;
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
 .project-media {
   width: 100%;
   height: 200px;
@@ -271,64 +310,55 @@
   </section>
 
   <!-- Projects Section -->
-<section id="projects" data-aos="fade-up">
-  <div class="container">
-    <h2 class="mb-4">Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <lottie-player class="project-media" src="https://assets10.lottiefiles.com/packages/lf20_Cc8Bpg.json" background="transparent" speed="1"  loop autoplay></lottie-player>
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2 class="mb-4">Projects</h2>
+      <div class="project-list">
+        
+        <div class="project-card p-3">
+          <lottie-player class="project-media" src="https://assets10.lottiefiles.com/packages/lf20_Cc8Bpg.json" background="transparent" speed="1" loop autoplay></lottie-player>
           <h5 class="card-title">Expense Tracker</h5>
           <p class="card-text">Track and visualize expenses using a clean UI with filtering features.</p>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
+  
+        <div class="project-card p-3">
           <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
                alt="Daily Brew Coffee Shop" class="project-media" />
           <h5 class="card-title">Daily Brew Website</h5>
           <p class="card-text">A responsive website for a fictional coffee shop built using HTML &amp; CSS.</p>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
+  
+        <div class="project-card p-3">
           <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" 
                alt="Library Management System" class="project-media" />
           <h5 class="card-title">Library Management System</h5>
           <p class="card-text">A software application to manage and automate library operations, including cataloging, circulation, and inventory management.</p>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
+  
+        <div class="project-card p-3">
           <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" 
                alt="Recipe Recommender" class="project-media" />
           <h5 class="card-title">Recipe Recommender</h5>
           <p class="card-text">Suggests recipes based on available ingredients using Python logic.</p>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
+  
+        <div class="project-card p-3">
           <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" 
                alt="Student Information System" class="project-media" />
           <h5 class="card-title">Student Information System</h5>
           <p class="card-text">A platform to manage student data, including enrollment, grades, attendance, and personal information.</p>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
+  
+        <div class="project-card p-3">
           <lottie-player class="project-media" src="https://assets5.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent" speed="1" loop autoplay></lottie-player>
           <h5 class="card-title">Math Quiz Game App</h5>
           <p class="card-text">Interactive quiz game that tests arithmetic skills with timer-based challenges.</p>
         </div>
+  
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
 
   <section id="contact" data-aos="fade-up">
