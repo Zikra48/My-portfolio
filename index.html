@@ -1,366 +1,271 @@
-[media pointer="file-service://file-LY4zEQi9ajVXSoV1SwmbyU"]
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zikra's Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
-.navbar-nav .nav-link:hover {
-  color: #0e3e22 !important;
-}
-
-
-
-    .btn-outline-secondary:hover {
-  background-color: #0e3e22;
-  border-color: #0e3e22;
-  color: white;
-}
-
-    .btn-success:hover {
-  background-color: #0e3e22;
-  border-color: #0e3e22;
-}
-
-  .project-card img {
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .project-card .card-body {
-    min-height: 150px;
-  }
-
-
-    section {
-  padding: 100px 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hover-btn {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.hover-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --primary: #6C63FF;
+      --accent: #FF6584;
+      --light: #f5f5f5;
+      --dark: #222;
     }
+
+    body.dark {
+      --bg: #111111;
+      --text: #ffffff;
+    }
+
     body {
-      transition: background-color 0.3s, color 0.3s;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s, color 0.4s;
     }
-    body.dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .navbar {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: white;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .dark-mode .navbar {
-      background-color: #1e1e1e;
-    }
-    /* Hero Section */
-    .hero {
-      height: 100vh;
+
+    header {
+      padding: 1.5rem;
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      background: #f8f9fa;
-      text-align: center;
-      padding: 0;
-    }
-    .hero-content {
-      padding-bottom: 60px;
-    }
-    .hero .btn {
-      margin: 10px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-    .hero .btn:hover {
-      transform: translateY(-5px);
-      background-color: #0d6efd;
-      color: #fff;
-    }
-    .dark-mode .hero {
-      background-color: #1a1a1a;
-    }
-    /* Full-page Section Styling */
-    section {
-      min-height: 100vh;
-      padding: 100px 0;
-      display: flex;
+      justify-content: space-between;
       align-items: center;
     }
-    #about {
-      background-color: #ffffff;
+
+    button.toggle {
+      background: none;
+      border: 2px solid var(--text);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: bold;
     }
-    #skills {
-      background-color: #f1f1f1;
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
     }
-    #projects {
-      background-color: #ffffff;
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
     }
-    #contact {
-      background-color: #f1f1f1;
+
+    .typewriter {
+      color: var(--primary);
+      font-weight: 600;
     }
-    .dark-mode #about,
-    .dark-mode #projects {
-      background-color: #1e1e1e;
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
-    .dark-mode #skills,
-    .dark-mode #contact {
-      background-color: #2a2a2a;
+
+    .skills i {
+      font-size: 2rem;
+      margin: 0.5rem;
+      color: var(--primary);
     }
-    /* Project card hover effect */
+
+    .skill-bar {
+      margin-top: 1rem;
+    }
+
+    .skill-bar span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .bar {
+      background: #ddd;
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .bar .fill {
+      height: 10px;
+      background: var(--primary);
+      border-radius: 5px;
+      animation: fillAnim 2s ease-out;
+    }
+
+    @keyframes fillAnim {
+      from { width: 0%; }
+    }
+
+    .project-list {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 1rem;
+    }
+
     .project-card {
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      border: none;
+      background: var(--light);
+      color: var(--text);
+      padding: 1.2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       transition: transform 0.3s;
     }
+
     .project-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
     }
-    .form-check-input:checked {
-      background-color: #0d6efd;
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
     }
-    .skill-description {
-      font-size: 0.9rem;
-      color: #6c757d;
+
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
-    /* Fade-in Animation */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease-out forwards;
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      resize: vertical;
     }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .socials {
+      margin-top: 1rem;
+    }
+
+    .socials a {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      color: var(--text);
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--primary);
     }
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Zikra Haroon</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- Added Home Link -->
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item d-flex align-items-center ps-3">
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" id="darkModeToggle">
-            </div>
-          </li>
-        </ul>
-      </div>
+
+  <header>
+    <h2>Zikra's Portfolio</h2>
+    <button class="toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <h1>Hi, I'm Zikra</h1>
+    <h2 class="typewriter" id="typewriter"></h2>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills">
+      <i class="fab fa-html5" title="HTML5"></i>
+      <i class="fab fa-css3-alt" title="CSS3"></i>
+      <i class="fab fa-js-square" title="JavaScript"></i>
+      <i class="fab fa-react" title="React"></i>
     </div>
-  </nav>
 
-  <!-- Home / Hero Section -->
-  <section class="hero d-flex align-items-center justify-content-center text-center" id="home" style="min-height: 100vh;">
-    <div class="container" data-aos="fade-up">
-      <h1 class="display-4 fw-bold">Hi, I'm Zikra Haroon</h1>
-      <p class="lead">Mathematics Graduate | Python & Excel Specialist | Data Enthusiast</p>
-      <div class="mt-4">
-        <a href="#projects" class="btn btn-success me-3 btn-lg hover-btn" style="background-color: #145A32; border-color: #145A32;">My Projects</a>
+    <div class="skill-bar">
+      <span>HTML</span>
+      <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+    </div>
 
-        <a href="#contact" class="btn btn-outline-secondary btn-lg hover-btn">Contact Me</a>
+    <div class="skill-bar">
+      <span>CSS</span>
+      <div class="bar"><div class="fill" style="width: 80%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>JavaScript</span>
+      <div class="bar"><div class="fill" style="width: 70%;"></div></div>
+    </div>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern portfolio built using HTML, CSS, and JavaScript with animations and theme support.</p>
+        <a href="https://zikra48.github.io/My-portfolio/" target="_blank">🔗 View Live</a>
+        <a href="https://github.com/Zikra48/My-portfolio" target="_blank">💻 Code</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Expense Tracker</h3>
+        <p>A simple app to track your income and expenses with local storage.</p>
+        <a href="#" target="_blank">🔗 View Live</a>
+        <a href="#" target="_blank">💻 Code</a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <h2 class="mb-4">About Me</h2>
-      <p>
-        I'm a Mathematics graduate with a passion for programming, data-driven problem solving, and creative tech solutions. I specialize in Python and HTML, using them to build clean, interactive tools that bring data and ideas to life.
-      </p>
-      <p>
-        My skill set includes advanced Excel (pivot tables, macros, dashboards), object-oriented Python programming, and responsive front-end development with HTML and CSS. I'm also exploring the power of Large Language Models (LLMs) to automate workflows, enhance research, and drive innovation.
-      </p>
-      <p>
-        From visualizing mathematical concepts to developing full-stack projects and collaborating through GitHub, I thrive at the intersection of logic, creativity, and modern AI. This portfolio is a glimpse into how I combine math, code, and design to solve real-world problems — explore and connect!
-      </p>
+  <section data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or social media!</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="socials">
+      <a href="https://github.com/zikra48" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/your-link" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" data-aos="fade-up">
-    <div class="container">
-      <h2 class="mb-4">Skills</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <span class="badge bg-primary">Python</span>
-          <p class="skill-description">Efficient scripting, OOPs, and automation tools.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="badge bg-secondary">HTML</span>
-          <p class="skill-description">Clean, semantic structure for modern web pages.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="badge bg-success">CSS</span>
-          <p class="skill-description">Responsive layouts and elegant visual styling.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="badge bg-info text-dark">Excel</span>
-          <p class="skill-description">Advanced analysis with dashboards, macros, and pivot tables.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="badge bg-dark">OOPs</span>
-          <p class="skill-description">Structured programming using classes and objects in Python.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="badge bg-warning text-dark">Data Analysis</span>
-          <p class="skill-description">Extracting insights from structured data using code and tools.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- Projects Section -->
-<section id="projects" data-aos="fade-up">
-  <div class="container">
-    <h2 class="mb-4">Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_Cc8Bpg.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
-          <h5 class="card-title">Expense Tracker</h5>
-          <p class="card-text">Track and visualize expenses using a clean UI with filtering features.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" 
-               alt="Daily Brew Coffee Shop" class="img-fluid rounded mb-3" />
-          <h5 class="card-title">Daily Brew Website</h5>
-          <p class="card-text">A responsive website for a fictional coffee shop built using HTML &amp; CSS.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" 
-               alt="Library Management System" class="img-fluid rounded mb-3" />
-          <h5 class="card-title">Library Management System</h5>
-          <p class="card-text">A software application to manage and automate library operations, including cataloging, circulation, and inventory management.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" 
-               alt="Recipe Recommender" class="img-fluid rounded mb-3" />
-          <h5 class="card-title">Recipe Recommender</h5>
-          <p class="card-text">Suggests recipes based on available ingredients using Python logic.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg" 
-               alt="Student Information System" class="img-fluid rounded mb-3" />
-          <h5 class="card-title">Student Information System</h5>
-          <p class="card-text">A platform to manage student data, including enrollment, grades, attendance, and personal information.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card project-card p-3">
-          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent" speed="1" style="height: 200px;" loop autoplay></lottie-player>
-          <h5 class="card-title">Math Quiz Game App</h5>
-          <p class="card-text">Interactive quiz game that tests arithmetic skills with timer-based challenges.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
- <!-- Contact Section -->
-<section id="contact" data-aos="fade-up">
-  <div class="container text-center">
-    <h2 class="mb-5">Get In Touch</h2>
-    <div class="d-flex flex-column align-items-center gap-3">
-      <div class="d-flex align-items-center">
-        <i class="fas fa-envelope fa-lg me-2 text-danger"></i>
-        <a href="mailto:zikraharoon248@gmail.com" class="text-danger text-decoration-none">zikraharoon248@gmail.com</a>
-      </div>
-      <div class="d-flex align-items-center">
-        <i class="fab fa-github fa-lg me-2 text-dark"></i>
-        <a href="https://github.com/Zikra48" target="_blank" class="text-dark text-decoration-none">Zikra48</a>
-      </div>
-      <div class="d-flex align-items-center">
-        <i class="fab fa-linkedin fa-lg me-2 text-primary"></i>
-        <a href="https://www.linkedin.com/in/zikra-haroon-a5ab5b2b7" target="_blank" class="text-primary text-decoration-none">Zikra Haroon</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-in-out'
-    });
+    const words = ["Web Developer", "Creative Designer", "Problem Solver"];
+    let i = 0, j = 0, current = '', isDeleting = false;
 
-    const toggle = document.getElementById('darkModeToggle');
-    const body = document.body;
+    function typeEffect() {
+      const typeElem = document.getElementById("typewriter");
+      current = words[i];
+      typeElem.innerHTML = current.substring(0, j) + (j % 2 === 0 ? "|" : "");
 
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-      body.classList.add('dark-mode');
-      toggle.checked = true;
+      if (!isDeleting && j++ === current.length) isDeleting = true;
+      else if (isDeleting && j-- === 0) {
+        isDeleting = false;
+        i = (i + 1) % words.length;
+      }
+
+      setTimeout(typeEffect, 120);
     }
 
-    toggle.addEventListener('change', () => {
-      if (toggle.checked) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('dark-mode', 'enabled');
-      } else {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('dark-mode', 'disabled');
-      }
-    });
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+
+    typeEffect();
   </script>
 </body>
 </html>
-
-
-
-
