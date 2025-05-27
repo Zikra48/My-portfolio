@@ -12,6 +12,38 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
     /* In your CSS */
+    .blob {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #ff6ec4 0%, #7873f5 100%);
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.6;
+  animation: moveBlobs 20s infinite ease-in-out;
+}
+
+.blob1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 10s;
+}
+
+@keyframes moveBlobs {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(60px, 80px) scale(1.1);
+  }
+}
+
 body {
   margin: 0;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
