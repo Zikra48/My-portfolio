@@ -9,7 +9,35 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
 
-.project-media {
+/* PROJECT SECTION LAYOUT */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--light);
+  color: var(--text);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img,
+.project-card lottie-player {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -17,28 +45,37 @@
   margin-bottom: 1rem;
 }
 
-.project-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+.project-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
 }
-.project-card img,
-.project-card lottie-player {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+
+.project-card p {
+  flex-grow: 1;
   margin-bottom: 1rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.project-media {
+  display: block;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 1rem;
 }
-.project-card:hover {
-  transform: translateY(-5px);
-}
+
+
+
+
 
   .container {
     width: 90%;
@@ -160,59 +197,14 @@
       from { width: 0%; }
     }
 
-    lottie-player.project-media {
-  display: block;
-}
+   
 
 
-    .project-media {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-
-    .project-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* ensures equal height in grid */
-}
-
-    .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 1.5rem;
-  align-items: stretch;
-  margin-top: 1rem;
-}
+   
 
 
 
-    .project-card {
-      background: var(--light);
-      color: var(--text);
-      padding: 1.2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-right: 1rem;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-    }
+    
 
     form {
       margin-top: 1rem;
