@@ -9,45 +9,6 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
 
-/* Keep your existing styles here — then add/replace these at the bottom of your style block: */
-
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-
-body {
-  scroll-padding-top: 0px;
-}
-
-section {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  padding: 4rem 1rem;
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-
 .project-media {
   width: 100%;
   height: 200px;
@@ -160,10 +121,11 @@ section {
     }
 
     section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto 4rem auto; /* Adds bottom margin for separation */
+}
+
 
     .skills i {
       font-size: 2rem;
@@ -199,11 +161,12 @@ section {
     }
 
     .project-list {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      margin-top: 1rem;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
 
     .project-card {
       background: var(--light);
@@ -302,7 +265,7 @@ section {
 
     <div class="skill-bar"><span>HTML</span><div class="bar"><div class="fill" style="width: 90%;"></div></div></div>
     <div class="skill-bar"><span>CSS</span><div class="bar"><div class="fill" style="width: 80%;"></div></div></div>
-    <div class="skill-bar"><span>JavaScript</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
+    
     <div class="skill-bar"><span>Python</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
     <div class="skill-bar"><span>Excel</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
     <div class="skill-bar"><span>Analysis Tools</span><div class="bar"><div class="fill" style="width: 70%;"></div></div></div>
@@ -407,3 +370,7 @@ section {
 
 </body>
 </html>
+
+
+update this according to it
+
